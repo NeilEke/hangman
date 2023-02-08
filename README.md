@@ -10,5 +10,5 @@ The player has to correctly identify the word before they guess 10 letters incor
 
 ## To play this game 
 
-You can either visit my website at ##http://www.dev4web.uk/hangman
+You can either visit my website at http://www.dev4web.uk/hangman
 or download the files and run in VS code or similar. Navigate to the download folder in a terminal window and type 'npm start' to start the game in your browser. The default browser should open to http://127.0.0.1:3000 for you to play the game.
