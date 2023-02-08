@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+:root {
+  font-family: 'Poppins';
+  font-weight: 300;
+}
+
+/* LAYOUT SECTIONS */
+    .AppContainer {
+      top: 10px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+
+      width: 360px;
+
+      padding: 10px;
+      border: 5px solid rgb(124, 124, 124);
+      border-radius: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .TopSection {
+
+      font-size: 10px;
+    }
+
+    .SideBySide {
+      display: flex;
+      padding-bottom: 10px;
+      align-items: center;
+    }
+
+    .BottomSection {
+      font-size: 15px;
+    }
+
+/* GAME START SECTION */
+    .GameStart {
+      margin-top: 10px;
+      width: 360px;
+      height:80px;
+      
+      font-size: 20px;
+    }
+
+    .WordLengthRefreshContainer{
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .WordLengthButtons {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .WordLengthButton {
+      width: 40px;
+      height: 40px;
+      border: 1px solid blue;
+      border-radius: 20px;
+      font-size: 28px;
+      margin: 5px;
+    }
+
+    .RestartButton{
+      align-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid blue;
+      border-radius: 20px;
+    }
+
+/* GAME WORD SECTION */
+    .GameWord {
+      width: 360px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .Hidden {
+      width: 30px;
+      height: 30px;
+      margin: 20px 4px;
+      padding-bottom: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      font-size: 0;
+      border-bottom: 3px solid black;
+    }
+
+    .GameLetter {
+      width: 30px;
+      height: 30px;
+      margin: 20px 4px;
+      padding-bottom: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      color:rgb(79, 79, 247);
+      border-bottom: 3px solid black;
+    }
+
+/* GAME SCORE SECTION */
+    .GameScore {
+      width: 80px;
+      margin-left: 8px;
+      font-size: 20px;
+      border: 3px solid rgb(79, 79, 247);
+      padding: 5px;
+      border-radius: 10px;
+      text-align: center;
+      color: blue
+
+    }
+
+/* GAME IMAGE SECTION */
+    .GameImage {
+      width: 250px;
+      height:250px;
+    }
+
+/* GAME CONTROL SECTION */
+.GameControl {
+  width: 360px;
+  height: 120px;
+}
+
+.ControlRow{
+  display: flex;
+  flex: row;
+  justify-content: center;
+}
+
+.AlphabetBlue{
+  width: 37px;
+  height: 37px;
+  border: 1px solid rgb(79, 79, 247);
+  background-color: rgb(168, 168, 240);
+  border-radius: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.AlphabetRed{
+  width: 37px;
+  height: 37px;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.AlphabetGreen{
+  width: 37px;
+  height: 37px;
+  border: 1px solid green;
+  background-color: green;
+  border-radius: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* RESTART SECTION */
+.buttonRestart{
+  width: 200px;
+  height: 37px;
+  border: 1px solid rgb(79, 79, 247);
+  background-color: rgb(168, 168, 240);
+  border-radius: 25px;
+  font-size: 28px;
+  text-align: center;
+}
+
+
+/* END */
