@@ -3,39 +3,33 @@ import { setWordLength } from "./GameStore";
 
 
 function GameStart(){
-    let dispatch = useDispatch()
 
+    let dispatch = useDispatch()
+// SET WORD LENGTH SELECTED
     const handleWordLength = (wordLength) => {
         dispatch(setWordLength({wordLength}));
         
     }
+// SET ARRAY FOR WORD LENGTH TO MAP
+    let arrayWordLength = [4,5,6,7,8,9]
 
+// CREATE BUTTONS FROM ARRAY MAP
+    let innerArray = arrayWordLength.map(wordLength => (
+        <div className="WordLengthButtons" key={wordLength}>
+            <button key={wordLength} className="WordLengthButton" onClick={() => handleWordLength(wordLength)}>{wordLength}</button>
+        </div>
+    ))
+
+// RETURN 
     return(
         <div className="GameStart">
             How long a word would you like to play?
             <div className="WordLengthRefreshContainer">
-                
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(4)}>4</button>
-                </div>
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(5)}>5</button>
-                </div>
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(6)}>6</button>
-                </div>
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(7)}>7</button>
-                </div>
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(8)}>8</button>
-                </div>
-                <div className="WordLengthButtons">
-                    <button className="WordLengthButton" onClick={() => handleWordLength(9)}>9</button>
-                </div>
+                {innerArray}
             </div>
         </div>
     ) 
 }
 
+// EXPORT
 export default GameStart;

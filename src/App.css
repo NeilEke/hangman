@@ -22,6 +22,21 @@
       background-color: rgb(255, 255, 255);
     }
 
+    .HelpBarWrapper {
+      display: flex;
+      justify-content: center;
+      width: 350px;
+      margin-top: 25px;;
+      padding: 10px;
+      align-items: center;
+      background-color: rgb(124, 124, 124);
+      border-radius: 10px;
+    }
+
+    .HelpButtonText {
+      font-size: 25px;
+    }
+
     .TopSection {
 
       font-size: 10px;

@@ -1,3 +1,4 @@
+// IMPORT ALL IMAGES AND FAIL VIDEO
 import Video from './images/Hangman10.mp4';
 import Image0 from './images/Hangman0.png';
 import Image1 from './images/Hangman1.png';
@@ -10,66 +11,23 @@ import Image7 from './images/Hangman7.png';
 import Image8 from './images/Hangman8.png';
 import Image9 from './images/Hangman9.png';
 
-
-
-
-
+// IMPORT
 import { useSelector } from 'react-redux';
 
+
 function GameImage(){
-
+// IMPORT STATE AND SET IMAGE ARRAY
     const wrongGuesses = useSelector(store => store.hangman.wrongGuesses);
-
-    if (wrongGuesses === 0){
-        return(<div className='GameImage'>
-            <img src={Image0} width="250px" height="250px" alt="Level 0"/>
-            </div>)
+    let imageArray = [Image0, Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9]
+// IF WRONG GUESSES < 10 SHOW IMAGE
+    if(wrongGuesses < 10){
+        return(
+            <div className='GameImage'>
+            <img src={imageArray[wrongGuesses]} width="250px" height="250px" alt="Level 0"/>
+            </div>
+        )        
     }
-    if (wrongGuesses === 1){
-        return(<div className='GameImage'>
-            <img src={Image1} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 2){
-        return(<div className='GameImage'>
-            <img src={Image2} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 3){
-        return(<div className='GameImage'>
-            <img src={Image3} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 4){
-        return(<div className='GameImage'>
-            <img src={Image4} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 5){
-        return(<div className='GameImage'>
-            <img src={Image5} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 6){
-        return(<div className='GameImage'>
-            <img src={Image6} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 7){
-        return(<div className='GameImage'>
-            <img src={Image7} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 8){
-        return(<div className='GameImage'>
-            <img src={Image8} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
-    if (wrongGuesses === 9){
-        return(<div className='GameImage'>
-            <img src={Image9} width="250px" height="250px" alt="Level 0"/>
-            </div>)
-    }
+// IF WRONG GUESS = 10 SHOW VIDEO
     if(wrongGuesses === 10){
         return(<div className="GameImage">
                 <video
@@ -85,4 +43,6 @@ function GameImage(){
             </div>) 
     } 
 }
+
+// EXPORT 
 export default GameImage;
